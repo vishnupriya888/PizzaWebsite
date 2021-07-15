@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css"></link>
+  <script>
+      pizzamenu = ["Corn Pizza", "Chicken Pizza","Cheese Pizza"];
+      function getmenu(){
+        var data ="";
+        var image ='<img id="pizza" src="images/pizzaImg.png"/>'
+        
+        pizzamenu.sort();
+        for (i = 0; i < pizzamenu.length; i++) {
+           
+            data = data+image +'<br/>'+pizzamenu[i]+ '<br/>'
+           
+        }
+        document.getElementById("displaymenu").innerHTML=data;
+    }
+  
+    function addPizza(){
+        var item=document.getElementById("suggest_pizza").value;
+        pizzamenu.push(item);
+        getmenu();
+    }
+  </script>
+
+  <body>
+    <button  onclick="getmenu()">Show Menu</button>
+    <input id="suggest_pizza" placeholder="Suggest Pizza?">
+    <button  onclick="addPizza()">Add</button>
+    <div class ="menu">
+        <div id="displaymenu"></div>
+    </div>
+    
+   
+  </body>
+</html>

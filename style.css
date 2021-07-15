@@ -1,0 +1,12 @@
+body {
+  background-image: url("images/Bg.jpg");
+}
+#pizza {
+  width: 10%;
+}
+.menu {
+  padding: 10px;
+  color: honeydew;
+  font-size: 25px;
+  font-family: cursive;
+}
